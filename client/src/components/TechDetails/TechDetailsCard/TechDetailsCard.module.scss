@@ -1,0 +1,70 @@
+$frontend: #2fa4f8ff;
+$system: #b772e8;
+$versioning: #73e6c2;
+
+.card {
+  height: 100%;
+  max-height: 136px;
+  background: linear-gradient(to bottom, #1c1c1c 25%, #222222 60%, #333333 90%);
+  padding: 16px;
+  border-radius: 10px;
+  border: solid 0.05px rgba(211, 211, 211, 0.062);
+  flex: 1 0 0;
+
+  & > h3 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+
+  & > h3[data-color="Frontend Development"] {
+    color: $frontend;
+  }
+
+  & > h3[data-color="System Integrations"] {
+    color: $system;
+  }
+
+  & > h3[data-color="Git & Versioning"] {
+    color: $versioning;
+  }
+
+  .list {
+    padding: 0;
+
+    li {
+      line-height: 1;
+      list-style-position: inside;
+      white-space: nowrap;
+
+      span {
+        position: relative;
+        top: -1.5px;
+        left: -12px;
+        color: rgb(172, 172, 172);
+        font-size: 0.85rem;
+      }
+    }
+    li::marker {
+      font-size: 1.25rem;
+    }
+    li[data-color="Frontend Development"] {
+      color: $frontend;
+    }
+    li[data-color="Backend Development"] {
+      color: $system;
+    }
+    li[data-color="Git & Versioning"] {
+      color: $versioning;
+    }
+  }
+
+  @media (min-width: 768px) {
+    max-height: 152px;
+  }
+
+  @media (min-width: 1024px) {
+    padding: 32px;
+    max-height: 192px;
+  }
+}
