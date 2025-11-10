@@ -4,16 +4,6 @@ import type { ITechIconsProps } from "./TechIcons/TechIcons";
 
 import styles from "./HeroInfo.module.scss";
 
-const currentDate = new Date();
-const learnDate = new Date("December 1, 2021");
-const proDate = new Date("August 1, 2025");
-
-const personalYears = currentDate.getFullYear() - learnDate.getFullYear();
-
-const professionalMonths = currentDate.getMonth() - proDate.getMonth();
-
-const professionalYears = currentDate.getFullYear() - proDate.getFullYear();
-
 const techIcons: ITechIconsProps[] = [
   { title: "React", color: "#2fa4f8ff", background: "#1a53af27" },
   { title: "Next.js", color: "#f6f6f6ff", background: "#54545430" },
@@ -25,6 +15,16 @@ const techIcons: ITechIconsProps[] = [
 ];
 
 export const HeroInfo: React.FC = (): React.ReactNode => {
+  const currentDate = new Date();
+  const learnDate = new Date("December 1, 2021");
+  const proDate = new Date("August 1, 2025");
+
+  const personalYears = currentDate.getFullYear() - learnDate.getFullYear();
+
+  const professionalMonths = currentDate.getMonth() - proDate.getMonth();
+
+  const professionalYears = currentDate.getFullYear() - proDate.getFullYear();
+  
   return (
     <section id="hero">
       <div className={styles.heroContainer}>
