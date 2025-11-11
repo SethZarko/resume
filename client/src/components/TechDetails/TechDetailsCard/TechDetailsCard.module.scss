@@ -3,13 +3,36 @@ $system: #b772e8;
 $versioning: #73e6c2;
 
 .card {
+  flex: 1 0 0;
   height: 100%;
   max-height: 136px;
-  background: linear-gradient(to bottom, #1c1c1c 25%, #222222 60%, #333333 90%);
   padding: 16px;
   border-radius: 10px;
-  border: solid 0.05px rgba(211, 211, 211, 0.062);
-  flex: 1 0 0;
+  background-color: rgba(48, 51, 56, 0.4);
+  border: 2px solid transparent;
+  border-radius: 0.5rem;
+
+  transition-property: background-color, border-color, color, fill, stroke;
+  transition-duration: 0.15s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &[data-color="Frontend Development"]:hover,
+  &[data-color="Frontend Development"]:focus-within {
+    background-color: rgba(47, 164, 248, 0.15);
+    border: solid 2px $frontend;
+  }
+
+  &[data-color="System Integrations"]:hover,
+  &[data-color="System Integrations"]:focus-within {
+    background-color: rgba(183, 114, 232, 0.15);
+    border: solid 2px $system;
+  }
+
+  &[data-color="Git & Versioning"]:hover,
+  &[data-color="Git & Versioning"]:focus-within {
+    background-color: rgba(115, 230, 194, 0.15);
+    border: solid 2px $versioning;
+  }
 
   & > h3 {
     font-size: 1.15rem;
