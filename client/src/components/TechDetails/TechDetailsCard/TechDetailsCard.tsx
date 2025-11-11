@@ -14,7 +14,7 @@ export const TechDetailsCard: React.FC<ITechDetailsCardProps> = ({
   color,
 }): React.ReactNode => {
   return (
-    <div className={styles.card}>
+    <div className={styles.card} data-color={color}>
       <h3 data-color={color}>{title}</h3>
       <ul className={styles.list}>
         <li data-color={color}>
