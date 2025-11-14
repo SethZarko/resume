@@ -1,0 +1,24 @@
+$frontend: #2fa4f8ff;
+$system: #b772e8;
+$versioning: #73e6c2;
+
+.chart {
+  display: flex;
+  flex-basis: 50%;
+  text-align: center;
+  margin: 16px 0 0 0;
+
+  span {
+    width: 100%;
+    font-size: 0.7rem;
+    background-color: rgba(47, 164, 248, 0.351);
+    border: solid 2px $frontend;
+    padding: 8px 16px;
+    border-radius: 5px;
+    color: white;
+
+    @media (min-width: 1024px) {
+      font-size: 0.85rem;
+    }
+  }
+}

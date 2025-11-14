@@ -1,0 +1,50 @@
+[
+  {
+    "projectDetails": {
+      "title": "Headless CMS Migration Project",
+      "description": "Four high-performance and highly optimized B2B informational static web applications handling multitudes of site visitors.",
+      "info": [
+        {
+          "frontend": {
+            "title": "Frontend Architecture",
+            "list": [
+              "Next.js SSG Components",
+              "React Components",
+              "GraphQL Client Query",
+              "TypeScript"
+            ]
+          }
+        },
+        {
+          "backend": {
+            "title": "Backend Systems",
+            "list": [
+              "Node/Express API",
+              "Contentful Headless CMS",
+              "AWS S3",
+              "Cloudfront Cache"
+            ]
+          }
+        },
+        {
+          "achievements": {
+            "title": "Key Achievements",
+            "list": [
+              "Completed Project One Month (20%) Ahead of Schedule",
+              "Optimized and Quick Content Delivery",
+              "Major Resource and Cost Reduction"
+            ]
+          }
+        }
+      ]
+    },
+    "flowChart": [
+      "Next.js Frontend (SSG + React Client Components)",
+      "GraphQL API Layer",
+      "Node/Express.js API",
+      "Cloudfront Cache Layer",
+      "Contentful Headless CMS",
+      "AWS S3"
+    ]
+  }
+]
