@@ -11,3 +11,39 @@ html {
 ul, li {
     list-style-type: disc !important;
 }
+
+.validation-message-container, .success-message-container {
+    display: flex;
+    align-items: center;
+}
+
+.success-message-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0;
+}
+
+.validation-message {
+    color: crimson;
+    padding: 0;
+    margin: 0;
+    flex-basis: 100%;
+}
+
+.form-success-message {
+    width: 100% !important;
+    color: #73e6c2;
+    margin: 0 auto;
+    font-size: 0.95rem;
+
+    @media(min-width: 425px) {
+        font-size: 1.15rem;
+    }
+
+    @media(min-width: 768px) {
+        font-size: 1.25rem;
+    }
+}

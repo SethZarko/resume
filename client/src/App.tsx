@@ -1,3 +1,4 @@
+import { ContactForm } from "./components/ContactForm/ContactForm"
 import { HeroInfo } from "./components/HeroInfo/HeroInfo"
 import { ProjectsContainer } from "./components/ProjectsContainer/ProjectsContainer"
 import { TechDetails } from "./components/TechDetails/TechDetails"
@@ -9,6 +10,7 @@ function App() {
      <HeroInfo/>
      <TechDetails/>
      <ProjectsContainer/>
+     <ContactForm/>
     </>
   )
 }
