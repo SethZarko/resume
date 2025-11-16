@@ -1,0 +1,39 @@
+footer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  padding: 48px;
+
+  .footerContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+    a {
+      padding: 0.5rem;
+      border-radius: 0.5rem;
+      transition-property: color, background-color;
+      transition-duration: 150ms;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+      svg {
+        font-size: 2.15rem;
+        cursor: pointer;
+
+        @media(min-width: 1024px) {
+            font-size: 2.5rem;
+        }
+      }
+    }
+  }
+
+  .year {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+
+    letter-spacing: 1px;
+  }
+}
