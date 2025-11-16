@@ -11,6 +11,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@formspree/react": "^3.0.0",
     "@picocss/pico": "^2.1.1",
     "motion": "^12.23.24",
     "react": "^19.1.1",
