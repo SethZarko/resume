@@ -1,3 +1,4 @@
+import { motion } from "motion/react";
 import type { IProject } from "../ProjectsContainer";
 
 import { ProjectInfo } from "./ProjectInfo/ProjectInfo";
@@ -17,7 +18,13 @@ export const ProjectCard: React.FC<IProjectCardProps> = ({
   const info = project.projectDetails.info;
 
   return (
-    <div className={styles.card}>
+    <motion.div
+      className={styles.card}
+      initial={{ opacity: 0, y: -1, scale: 0.95 }}
+      whileInView={{ opacity: 1, y: 0, scale: 1 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      viewport={{ once: true, amount: 0.5 }}
+    >
       <h3>{title}</h3>
       <p>{description}</p>
 
@@ -33,6 +40,6 @@ export const ProjectCard: React.FC<IProjectCardProps> = ({
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };

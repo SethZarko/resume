@@ -1,3 +1,4 @@
+import { motion } from "motion/react"; 
 import { TechIcons } from "./TechIcons/TechIcons";
 
 import type { ITechIconsProps } from "./TechIcons/TechIcons";
@@ -28,7 +29,12 @@ export const HeroInfo: React.FC = (): React.ReactNode => {
   return (
     <section id="hero">
       <div className={styles.heroContainer}>
-        <div>
+        <motion.div
+          initial={{ opacity: 0, y: -50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true, amount: 0.3 }}
+        >
           <h1>Seth Zarkovich</h1>
           <h2>Front End Developer</h2>
           <h3>
@@ -43,14 +49,20 @@ export const HeroInfo: React.FC = (): React.ReactNode => {
             Currently at Contract Front End Developer for{" "}
             <span>CARFAX U.S</span>
           </p>
-        </div>
+        </motion.div>
 
-        <div className={styles.iconContainer}>
+        <motion.div
+          className={styles.iconContainer}
+          initial={{ opacity: 0, y: -50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+          viewport={{ once: true, amount: 0.3 }}
+        >
           {techIcons.map((icons: ITechIconsProps, index: number) => (
             <TechIcons key={index} {...icons} />
           ))}
+        </motion.div>
         </div>
-      </div>
     </section>
   );
 };

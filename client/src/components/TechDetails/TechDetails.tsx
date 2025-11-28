@@ -1,5 +1,7 @@
-import styles from "./TechDetails.module.scss";
+import { motion } from "motion/react";
 import { TechDetailsCard } from "./TechDetailsCard/TechDetailsCard";
+
+import styles from "./TechDetails.module.scss";
 
 export interface ITechDetails {
   title: string;
@@ -34,7 +36,12 @@ export const TechDetails: React.FC = (): React.ReactNode => {
     <section id="tech-details">
       <div className={styles.techDetailsContainer}>
         <div className={styles.wrapper}>
-          <div className={styles.cardContainer}>
+          <motion.div 
+            className={styles.cardContainer}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+          >
             {techDetails.map((card: ITechDetails, index: number) => {
               let color: string = "";
 
@@ -54,7 +61,7 @@ export const TechDetails: React.FC = (): React.ReactNode => {
                 <TechDetailsCard key={index} {...card} color={color} />
               );
             })}
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
