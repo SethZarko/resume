@@ -1,3 +1,4 @@
+import { motion } from "motion/react";
 import styles from "./ContactForm.module.scss";
 import Form from "./Form/Form";
 
@@ -5,7 +6,13 @@ export const ContactForm: React.FC = (): React.ReactNode => {
   return (
     <section id="contact">
       <hr className={styles.divider}/>
-      <div className={styles.contactWrapper}>
+      <motion.div 
+        className={styles.contactWrapper}
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        viewport={{ once: true, amount: 0.3 }}
+      >
         <h2>Let's Build Something Amazing</h2>
         <p>Looking for a frontend developer who can implement beautiful and functional solutions? Let's discuss your needs.</p>
         <div className={styles.locationWrapper}>
@@ -15,7 +22,7 @@ export const ContactForm: React.FC = (): React.ReactNode => {
         <div className={styles.contactContainer}>
             <Form/>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };
