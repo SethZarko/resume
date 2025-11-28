@@ -6,7 +6,6 @@
     flex-basis: 60%;
   .infoContainer {
 
-    
     & > h4 {
       font-size: 0.85rem;
     }
@@ -30,6 +29,10 @@
         list-style-position: inside;
       }
     }
+  }
+
+  @media(min-width: 425px) {
+    gap: 16px;
   }
 
   @media(min-width: 768px) {

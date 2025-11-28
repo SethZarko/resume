@@ -32,7 +32,7 @@ export const HeroInfo: React.FC = (): React.ReactNode => {
           <h1>Seth Zarkovich</h1>
           <h2>Front End Developer</h2>
           <h3>
-            I build front end solutions with {personalYears}+ years of personal
+            I build frontend solutions with {personalYears}+ years of personal
             experience and{" "}
             {professionalYears < 1
               ? `${professionalMonths} months`

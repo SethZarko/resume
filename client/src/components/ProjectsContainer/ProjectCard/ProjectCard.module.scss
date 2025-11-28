@@ -46,16 +46,21 @@
 
       border-radius: 10px;
       height: 100%;
-      padding: 24px;
+      padding: 24px 16px 16px;
       background-color: rgb(20, 20, 20);
       border: solid 0.1px white;
 
       & > h6 {
+        text-align: center;
         color: rgb(218, 218, 218);
+
+        @media(min-width: 1024px) {
+          font-size: 1.15rem;
+        }
       }
 
       .flowContainer {
-        padding: 0 0 16px 0;
+        padding: 0 0 8px 0;
 
         @media (min-width: 1024px) {
           padding: 16px;
