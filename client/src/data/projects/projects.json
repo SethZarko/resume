@@ -3,6 +3,8 @@
     "projectDetails": {
       "title": "Headless CMS Migration Project",
       "description": "Four high-performance and highly optimized B2B informational static web applications handling multitudes of site visitors.",
+      "link": "",
+      "linkName": "",
       "info": [
         {
           "frontend": {
@@ -45,6 +47,51 @@
       "Cloudfront Cache Layer",
       "Contentful Headless CMS",
       "AWS S3"
+    ]
+  },
+  {
+    "projectDetails": {
+      "title": "Philosophy Journal App",
+      "description": "A simple CRUD app that allows users to create journal entries. As well, a simple fetch requests that gets philosopher quotes for inspiration.",
+      "link": "https://journafly.vercel.app/",
+      "linkName": "JournaFly",
+      "info": [
+        {
+          "frontend": {
+            "title": "Frontend Architecture",
+            "list": [
+              "React SPA",
+              "React Router",
+              "TypeScript",
+              "Fetch API"
+            ]
+          }
+        },
+        {
+          "backend": {
+            "title": "Backend Systems",
+            "list": [
+              "Philosophers API",
+              "Third Party"
+            ]
+          }
+        },
+        {
+          "achievements": {
+            "title": "Key Achievements",
+            "list": [
+              "Implemented Centralized State with localStorage",
+              "Implemented Array Sorting with useMemo for Performance",
+              "Personal Project"
+            ]
+          }
+        }
+      ]
+    },
+    "flowChart": [
+      "React SPA",
+      "React Router",
+      "Vercel"
     ]
   }
 ]
