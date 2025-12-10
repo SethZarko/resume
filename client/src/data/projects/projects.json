@@ -60,7 +60,7 @@
           "frontend": {
             "title": "Frontend Architecture",
             "list": [
-              "React SPA",
+              "React",
               "React Router",
               "TypeScript",
               "Fetch API"
@@ -89,7 +89,7 @@
       ]
     },
     "flowChart": [
-      "React SPA",
+      "React",
       "React Router",
       "Vercel"
     ]
