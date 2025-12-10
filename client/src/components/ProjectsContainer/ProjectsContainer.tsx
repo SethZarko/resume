@@ -18,6 +18,8 @@ export type IInfo =
 export interface IProjectDetails {
   title: string;
   description: string;
+  link: string;
+  linkName: string;
   info: IInfo[];
 }
 

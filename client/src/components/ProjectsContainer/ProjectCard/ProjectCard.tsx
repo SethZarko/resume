@@ -13,9 +13,11 @@ interface IProjectCardProps {
 export const ProjectCard: React.FC<IProjectCardProps> = ({
   project,
 }): React.ReactNode => {
-  const title = project.projectDetails.title;
-  const description = project.projectDetails.description;
-  const info = project.projectDetails.info;
+  const title = project?.projectDetails?.title;
+  const description = project?.projectDetails?.description;
+  const info = project?.projectDetails?.info;
+  const link = project?.projectDetails?.link
+  const linkName = project?.projectDetails?.linkName
 
   return (
     <motion.div
@@ -30,6 +32,7 @@ export const ProjectCard: React.FC<IProjectCardProps> = ({
 
       <div className={styles.cardDetails}>
         <ProjectInfo projectInfo={info} />
+        {link && <p className={styles.projectLink}>Project Link: <a href={link} target="_blank" rel="noopener noreferrer">{linkName}</a></p>}
 
         <div className={styles.flowWrapper}>
           <h6>System Architecture</h6>
