@@ -1,5 +1,6 @@
 import { motion } from "motion/react"; 
 import { TechIcons } from "./TechIcons/TechIcons";
+import { calculateDifference } from "../../utils/calculateYears";
 
 import type { ITechIconsProps } from "./TechIcons/TechIcons";
 
@@ -20,9 +21,9 @@ export const HeroInfo: React.FC = (): React.ReactNode => {
   const learnDate = new Date("December 1, 2021");
   const proDate = new Date("August 1, 2025");
 
-  const personalYears = currentDate.getFullYear() - learnDate.getFullYear();
+  const personalYears = calculateDifference(learnDate);
 
-  const professionalMonths = currentDate.getMonth() - proDate.getMonth();
+  const professionalMonths = currentDate.getMonth() + proDate.getMonth() - 1;
 
   const professionalYears = currentDate.getFullYear() - proDate.getFullYear();
   
@@ -38,11 +39,11 @@ export const HeroInfo: React.FC = (): React.ReactNode => {
           <h1>Seth Zarkovich</h1>
           <h2>Front End Developer</h2>
           <h3>
-            I build frontend solutions with {personalYears}+ years of personal
+            I build frontend solutions with {personalYears} years of personal
             experience and{" "}
-            {professionalYears < 1
+            {professionalMonths <= 12
               ? `${professionalMonths} months`
-              : `${professionalYears}+ years`}{" "}
+              :  professionalYears <= 1 ? `${professionalYears} year` : `${professionalYears} years`}{" "}
             building scalable applications professionally.
           </h3>
           <p>
