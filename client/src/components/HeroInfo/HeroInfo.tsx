@@ -21,11 +21,11 @@ export const HeroInfo: React.FC = (): React.ReactNode => {
   const learnDate = new Date("December 1, 2021");
   const proDate = new Date("August 1, 2025");
 
-  const personalYears = calculateDifference(learnDate);
+  const personalYears = calculateDifference(learnDate, currentDate);
 
   const professionalMonths = currentDate.getMonth() + proDate.getMonth() - 1;
 
-  const professionalYears = currentDate.getFullYear() - proDate.getFullYear();
+  const professionalYears = calculateDifference(proDate, currentDate);
   
   return (
     <section id="hero">
@@ -41,7 +41,7 @@ export const HeroInfo: React.FC = (): React.ReactNode => {
           <h3>
             I build frontend solutions with {personalYears} years of personal
             experience and{" "}
-            {professionalMonths <= 12
+            {professionalYears < 1
               ? `${professionalMonths} months`
               :  professionalYears <= 1 ? `${professionalYears} year` : `${professionalYears} years`}{" "}
             building scalable applications professionally.
