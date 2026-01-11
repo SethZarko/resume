@@ -53,6 +53,7 @@ $versioning: #73e6c2;
 
   .list {
     padding: 0;
+    margin-bottom: 0;
 
     li {
       line-height: 1;
@@ -70,6 +71,9 @@ $versioning: #73e6c2;
     li::marker {
       font-size: 1.25rem;
     }
+    li:last-of-type {
+      margin-bottom: 0;
+    }
     li[data-color="Frontend Development"] {
       color: $frontend;
     }
@@ -86,7 +90,7 @@ $versioning: #73e6c2;
   }
 
   @media (min-width: 1024px) {
-    padding: 32px;
+    padding: 24px;
     max-height: 192px;
   }
 }
