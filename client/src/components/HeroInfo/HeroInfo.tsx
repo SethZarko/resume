@@ -39,11 +39,11 @@ export const HeroInfo: React.FC = (): React.ReactNode => {
           <h1>Seth Zarkovich</h1>
           <h2>Front End Developer</h2>
           <h3>
-            I build frontend solutions with {personalYears} years of personal
+            I build frontend solutions with <span>{personalYears} years</span> of personal
             experience and{" "}
-            {professionalYears < 1
+            <span>{professionalYears < 1
               ? `${professionalMonths} months`
-              :  professionalYears <= 1 ? `${professionalYears} year` : `${professionalYears} years`}{" "}
+              :  professionalYears <= 1 ? `${professionalYears} year` : `${professionalYears} years`}</span>{" "}
             building scalable applications professionally.
           </h3>
           <p>
