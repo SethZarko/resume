@@ -36,7 +36,7 @@ export const ProjectCard: React.FC<IProjectCardProps> = ({
 
         <div className={styles.flowWrapper}>
           <h6>System Architecture</h6>
-          <div className={styles.flowContainer}>
+          <div>
             {project.flowChart.map((item: string, index: number) => (
               <FlowChart key={index} item={item} />
             ))}
