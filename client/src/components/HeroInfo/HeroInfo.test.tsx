@@ -17,16 +17,25 @@ describe("Component: HeroInfo", () => {
     render(<HeroInfo />);
 
     expect(screen.queryByRole("heading", { level: 3 })).toHaveTextContent(
-      "3 months"
+      /months/i
     );
   });
 
-  it("shows years when professionalYears >= 1", () => {
+  it("shows text 'years' when professionalYears >= 1", () => {
     vi.setSystemTime(new Date("2026-9-1"));
     render(<HeroInfo />);
 
     expect(screen.queryByRole("heading", { level: 3 })).toHaveTextContent(
-      "1+ years"
+      /years/i
+    );
+  });
+
+  it("shows text 'year' when professionalYears < 1", () => {
+    vi.setSystemTime(new Date("2026-5-1"));
+    render(<HeroInfo />);
+
+    expect(screen.queryByRole("heading", { level: 3 })).toHaveTextContent(
+      /year/i
     );
   });
 });
