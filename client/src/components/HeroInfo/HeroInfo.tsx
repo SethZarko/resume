@@ -5,7 +5,6 @@ import { calculateDifference } from "../../utils/calculateYears";
 import type { ITechIconsProps } from "./TechIcons/TechIcons";
 
 import styles from "./HeroInfo.module.scss";
-import { getProfessionalExperienceText } from "../../utils/calculateExperience";
 
 const techIcons: ITechIconsProps[] = [
   { title: "React", color: "#2fa4f8ff", background: "#1a53af27" },
@@ -42,7 +41,9 @@ export const HeroInfo: React.FC = (): React.ReactNode => {
           <h3>
             I build frontend solutions with <span>{personalYears} years</span> of personal
             experience and{" "}
-            <span>{getProfessionalExperienceText(professionalYears, professionalMonths)}</span>{" "}
+            <span>{professionalYears < 1
+              ? `${professionalMonths} months`
+              :  professionalYears <= 1 ? `${professionalYears} year` : `${professionalYears} years`}</span>{" "}
             building scalable applications professionally.
           </h3>
           <p>
