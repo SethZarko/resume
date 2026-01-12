@@ -55,7 +55,7 @@
       height: 100%;
 
       margin: 0 auto;
-      padding: 24px 16px 16px;
+      padding: 24px 16px;
 
       display: flex;
       flex-direction: column;
@@ -74,14 +74,6 @@
 
         @media(min-width: 1024px) {
           font-size: 1.15rem;
-        }
-      }
-
-      .flowContainer {
-        padding: 0 0 8px 0;
-
-        @media (min-width: 1024px) {
-          padding: 16px;
         }
       }
 
@@ -107,6 +99,6 @@
   }
 
   @media (min-width: 1024px) {
-    padding: 32px;
+    padding: 32px 32px 16px;
   }
 }
