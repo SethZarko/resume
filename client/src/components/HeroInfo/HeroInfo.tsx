@@ -46,7 +46,7 @@ export const HeroInfo: React.FC = (): React.ReactNode => {
             building scalable applications professionally.
           </h3>
           <p>
-            Currently at Contract Front End Developer for{" "}
+            Associate Software Engineer for{" "}
             <span>CARFAX U.S</span>
           </p>
         </motion.div>
